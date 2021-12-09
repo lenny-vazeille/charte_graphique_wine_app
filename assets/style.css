@@ -1,0 +1,430 @@
+/***************** GRAPHIC CHART *****************/
+
+
+/* Color Theme Swatches in Hex */
+
+
+/*! définir des variables  */
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-1-hex {
+    color: #511201;
+}
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-2-hex {
+    color: #AD160F;
+}
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-3-hex {
+    color: #F0F2F2;
+}
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-4-hex {
+    color: #F8E8E8;
+}
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-5-hex {
+    color: #F2E5BD;
+}
+
+
+/* Font */
+
+@font-face {
+    font-family: "Playfair Display', serif";
+    src: url("./Font/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("ttf"), url("./Font/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("ttf");
+}
+
+
+/****************** GLOBAL *****************/
+
+html,
+body {
+    background-color: #030303;
+    font-family: 'Playfair Display', serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/****************** CONTENT PAGE *****************/
+
+
+/*** Header ***/
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 50px;
+    z-index: 3000;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+
+/* Title  */
+
+body>header>h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-left: 50px;
+    z-index: 3000;
+    padding: 30px 0;
+    letter-spacing: 10px;
+}
+
+
+/* Bloc "Apéro Diner Plaisir" */
+
+body>header>span {
+    color: #AD160F;
+    font-size: 2rem;
+    z-index: 3;
+}
+
+
+/*  Bloc "?" */
+
+header::before {
+    content: '?';
+    width: 6px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 20px 20px;
+    align-content: center;
+    margin: 3px;
+    font-size: 3rem;
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: underline #511201 10px;
+    height: 6px;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 3;
+}
+
+
+/*** CONTENT ***/
+
+
+/* Bloc Global  */
+
+section {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: flex-start;
+    padding: 20px;
+    align-content: center;
+    margin: 3px;
+    width: 97vw;
+    height: 100vh;
+    transition: all 1s ease-in 300ms;
+    -webkit-transition: all 1s ease-in 300ms;
+    -moz-transition: all 1s ease-in 300ms;
+    -ms-transition: all 1s ease-in 300ms;
+    -o-transition: all 1s ease-in 300ms;
+}
+
+
+/* Hover Arrow => Affichage Bloc info */
+
+header:hover::before {
+    content: 'Problématique : Développer une application de partage des connaissances - Pour les amateurs d\'oenologie, les producteur ou simple curieux ';
+    width: 456px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 20px 20px;
+    align-content: center;
+    margin: 3px;
+    font-size: 3rem;
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: underline #511201 10px;
+    height: 575px;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 3000;
+}
+
+
+/* Bloc Right "vin naturel" */
+
+section::after {
+    content: "vin naturel";
+    box-shadow: rgb(242, 229, 189) 0px 0px 0px 100px inset;
+    font-weight: 900;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    padding: 10px 40px;
+    transform: rotate(270deg);
+    margin: 3px;
+    font-size: 3rem;
+    color: rgb(173, 22, 15);
+    height: 10px;
+    letter-spacing: 10px;
+    position: fixed;
+    bottom: 188px;
+    right: -190px;
+    z-index: 3;
+}
+
+
+/* Container Parent  */
+
+.WhiteBloc,
+.DarkBloc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    justify-items: center;
+    align-items: flex-start;
+    padding: 10px 30px;
+    opacity: 0.5;
+    flex-wrap: wrap;
+    filter: blur(100px);
+    transition: all 1s ease-in;
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -ms-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    -webkit-filter: blur(100px);
+}
+
+.WhiteBloc:hover,
+.DarkBloc:hover {
+    opacity: 1;
+    transition: All 30ms ease-in;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    -webkit-transition: All 30ms ease-in;
+    -moz-transition: All 30ms ease-in;
+    -ms-transition: All 30ms ease-in;
+    -o-transition: All 30ms ease-in;
+}
+
+
+/* Right */
+
+.DarkBloc {
+    background-color: #F2E5BD;
+    /* width: 100%; */
+}
+
+
+/*** Text  ***/
+
+
+/*! définir des variables  */
+
+
+/* Title  */
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    color: #AD160F;
+    font-weight: 900;
+    line-height: 60px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 4rem;
+    color: #F2E5BD;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #F0F2F2;
+}
+
+
+/* Paragraphe  */
+
+p {
+    color: #F2E5BD;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* bolder */
+
+p2 {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.DarkBloc>h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5.5rem;
+    color: #AD160F;
+    font-weight: 900;
+}
+
+.DarkBloc>h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #F0F2F2;
+}
+
+.DarkBloc>h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 4rem;
+    color: #511201;
+}
+
+.DarkBloc>p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #511201;
+}
+
+img {
+    padding: 20px 0;
+}
+
+.Info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.Info>ul {
+    color: #F2E5BD;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+}
+
+.Info>ul>li {
+    color: #000000;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    list-style: none;
+    border-left: 1px solid #ad160f;
+    border-right: unset;
+    margin-left: 179px;
+}
+
+
+/*** Footer  ***/
+
+footer {
+    background-color: #00000054;
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0px;
+}
+
+ul {
+    color: #F2E5BD;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+li {
+    color: #F2E5BD;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    list-style: none;
+    border-right: 1px solid #ad160f;
+}
+
+
+/****************** RESPONSIVE *****************/
+
+@media screen and (max-width: 960px) {
+    body>header>h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        margin-left: 25px;
+        z-index: 3000;
+        padding: 20px 0;
+        letter-spacing: 3px;
+        font-size: 1.5rem;
+    }
+    /* Global  */
+    section {
+        position: absolute;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 20px;
+        width: unset;
+        height: unset;
+        transition: all 1s ease-in 300ms;
+        -webkit-transition: all 1s ease-in 300ms;
+        -moz-transition: all 1s ease-in 300ms;
+        -ms-transition: all 1s ease-in 300ms;
+        -o-transition: all 1s ease-in 300ms;
+    }
+    /* TEST : Remove Opacity & Blur Effect on hover */
+    /* Container Parent  */
+    .WhiteBloc,
+    .DarkBloc {
+        opacity: 1;
+        flex-wrap: wrap;
+        filter: blur(0px);
+        transition: all 1s ease-in;
+        -webkit-transition: all 1s ease-in;
+        -moz-transition: all 1s ease-in;
+        -ms-transition: all 1s ease-in;
+        -o-transition: all 1s ease-in;
+        -webkit-filter: blur(0px);
+    }
+}
